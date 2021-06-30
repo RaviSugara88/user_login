@@ -32,29 +32,29 @@ class Home extends StatelessWidget{
                child:Image.asset('assets/logo.png'),
                flex: 2,),
              Expanded(
-               flex: 2,
+               flex: 1,
                child: Container(
                  color: Colors.blueAccent,
                  padding: EdgeInsets.all(30.0),
-                 child: Text(" container 1"),
+                 child: Text("1"),
                ),
              ),
              Expanded(
-               flex: 2,
+               flex: 1,
                child: Container(
                  color: Colors.cyan,
                  padding: EdgeInsets.all(30.0),
-                 child: Text("inside  2"),
+                 child: Text("2"),
                ),
              ),
-            Expanded(
-              flex: 1,
-              child: Container(
-              color: Colors.green,
-              padding: EdgeInsets.all(30.0),
-              child: Text(""),
-            ),
-            ),
+             Expanded(
+               flex: 1,
+               child: Container(
+                 color: Colors.green,
+                 padding: EdgeInsets.all(30.0),
+                 child: Text("3"),
+               ),
+             ),
            ],
 
          ),
