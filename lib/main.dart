@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 
-//https://www.youtube.com/watch?v=a6oKFvGuTH4&list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ&index=11
 //https://www.youtube.com/watch?v=RdPkFd6_fTA&list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ&index=13
 void main() {
   runApp(MaterialApp(
@@ -15,42 +14,67 @@ class Home extends StatelessWidget{
     // TODO: implement build
 
    return Scaffold(
+     backgroundColor: Colors.grey[900],
      appBar: AppBar(
        title: Text('My First App'),
        centerTitle: true,
        //c+Q show color plate
-       backgroundColor: Colors.green[400],
+       backgroundColor: Colors.grey[850],
      ),
-     body: Column(
-       mainAxisAlignment: MainAxisAlignment.spaceAround,
-       crossAxisAlignment: CrossAxisAlignment.start,
-       children: <Widget>[
-         Row(
-           mainAxisAlignment: MainAxisAlignment.spaceAround,
-           crossAxisAlignment: CrossAxisAlignment.start,
-           children: <Widget>[
-             FlatButton(onPressed: (){}, child: Text("ok"),color: Colors.amber,),
-             Text("data"),
-             Container(
-               color: Colors.cyan,
-               padding: EdgeInsets.all(30.0),
-               child: Text("inside container"),
-             )
-           ],
+     body:Padding(
+       padding: EdgeInsets.all(10.0),
+       child: Column(
+         mainAxisAlignment: MainAxisAlignment.spaceAround,
+         crossAxisAlignment: CrossAxisAlignment.start,
+         children: <Widget>[
+           Row(
+             mainAxisAlignment: MainAxisAlignment.spaceAround,
+             crossAxisAlignment: CrossAxisAlignment.start,
+             children: <Widget>[
+               Expanded(
+                 child:Image.asset('assets/logo.png'),
+                 flex: 2,),
+               Expanded(
+                 flex: 1,
+                 child: Container(
+                   color: Colors.blueAccent,
+                   padding: EdgeInsets.all(30.0),
+                   child: Text("1"),
+                 ),
+               ),
+               Expanded(
+                 flex: 1,
+                 child: Container(
+                   color: Colors.cyan,
+                   padding: EdgeInsets.all(30.0),
+                   child: Text("2"),
+                 ),
+               ),
+               Expanded(
+                 flex: 1,
+                 child: Container(
+                   color: Colors.green,
+                   padding: EdgeInsets.all(30.0),
+                   child: Text("3"),
+                 ),
+               ),
+             ],
 
-         ),
-         Container(
-           padding: EdgeInsets.all(20.0),
-           color: Colors.deepOrange,
-           child: Text("First Colum"),
-         ),
-         Container(
-           padding: EdgeInsets.all(20.0),
-           color: Colors.lightBlue,
-           child: Text("Second Colum"),
-         )
-       ],
+           ),
+           Container(
+             padding: EdgeInsets.all(20.0),
+             color: Colors.deepOrange,
+             child: Text("First Colum"),
+           ),
+           Container(
+             padding: EdgeInsets.all(20.0),
+             color: Colors.lightBlue,
+             child: Text("Second Colum"),
+           )
+         ],
+       ),
      ),
+
 
      floatingActionButton: FloatingActionButton(
        onPressed: () {  },
