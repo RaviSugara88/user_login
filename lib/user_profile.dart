@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-//https://www.youtube.com/watch?v=RdPkFd6_fTA&list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ&index=13
+//https://www.youtube.com/watch?v=p5dkB3Mrxdo&list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ&index=16
 void main() {
   runApp(MaterialApp(
     home: Home()
@@ -29,7 +29,7 @@ class Home extends StatelessWidget{
          children: <Widget>[
            Center(
              child: CircleAvatar(
-               backgroundImage: AssetImage('assets/logo.png'),
+               backgroundImage: AssetImage('assets/logo.jpg'),
                radius: 40.0,
              ),
            ),

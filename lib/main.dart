@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 
 
-//https://www.youtube.com/watch?v=RdPkFd6_fTA&list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ&index=13
+//https://www.youtube.com/watch?v=_AC90CiDoKA&list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ&index=17
 void main() {
   runApp(MaterialApp(
     home: Home()
   ));
 }
 // Stateless Widget support Hot restart(when save project then project build automatic)
-class Home extends StatelessWidget{
+class Home extends StatefulWidget{
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int uNo = 0;
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -77,7 +83,7 @@ class Home extends StatelessWidget{
              height: 20.0,
              color: Colors.grey[500],
            ),
-           Text('Mobile No.',
+           Text('Count',
              style: TextStyle(
                  fontSize: 14.0,
                  color: Colors.grey,
@@ -85,7 +91,7 @@ class Home extends StatelessWidget{
              ),
            ),
            SizedBox(height: 10.0,),
-           Text('+91 1234567890',
+           Text('$uNo',
              style: TextStyle(
                  color: Colors.amberAccent[200],
                  letterSpacing: 2.0,
@@ -116,14 +122,17 @@ class Home extends StatelessWidget{
        ),
      ),
 
-
-     // floatingActionButton: FloatingActionButton(
-     //   onPressed: () {  },
-     //   child: Text('click'),
-     //   backgroundColor: Colors.red[400],
-     // ),
+     floatingActionButton: FloatingActionButton(
+       onPressed: () {
+         // function of stateFullWight change state
+         setState(() {
+           uNo += 1;
+         });
+       },
+       child: Icon(Icons.add),
+       backgroundColor: Colors.grey[800],
+     ),
    );
   }
-
 }
 
