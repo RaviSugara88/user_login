@@ -114,7 +114,7 @@ class _HomeState extends State<Home> {
              style: TextStyle(
                  color: Colors.amberAccent[200],
                  letterSpacing: 2.0,
-                 fontSize: 20.0,
+                 fontSize: 24.0,
                  fontWeight: FontWeight.bold
              ),),
 
